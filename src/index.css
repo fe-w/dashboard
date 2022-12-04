@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dashboard {padding: 40px 100px;}
+.dashboard hr {border: 1px solid #eee; margin: 24px 0;}
+.dashboard .chart {display: grid; gap: 40px;}

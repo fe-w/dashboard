@@ -1,15 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import MultiEmail from './components/multiEmail';
+import UploadImage from './components/uploadImage';
+import ChartArea from './components/chart/area';
+import ChartBar from './components/chart/bar';
+import ChartDonut from './components/chart/donut';
+import ChartBarList from './components/chart/barList';
+import ChartDataBar from './components/chart/dataBar';
+import ChartTracker from './components/chart/tracker';
+import Header from './components/header'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <div className='dashboard'>
+      <div className='chart'>
+        <div className="box">
+          <div className="inner">
+            <MultiEmail />
+            <UploadImage />
+            <ChartDataBar />
+            <ChartTracker />
+          </div>
+          <ChartDonut />
+          <ChartBarList />
+        </div>
+        <div className="box">
+          <ChartArea />
+          <ChartBar />
+        </div>
+      </div>
+    </div>
   </React.StrictMode>
 );
 
